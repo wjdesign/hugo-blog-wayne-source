@@ -1,36 +1,43 @@
 +++
-author = "Hugo Authors"
-title = "Markdown Syntax Guide"
-date = "2019-03-11"
-description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
+author = "Wayne"
+title = "Markdown 語法指南"
+date = "2022-07-16"
+description = "Markdown 是目前非常普遍用來撰寫文檔的語言，一開始的目標就是使用「易讀易寫的純文字格式編寫文件」，此初衷讓使用者可以專注在文字的本身，而不需要透過其它工具來切換格式。"
+
 tags = [
     "markdown",
     "css",
     "html",
     "themes",
 ]
+
 categories = [
-    "themes",
+    "markdown",
     "syntax",
 ]
+
 series = ["Themes Guide"]
 aliases = ["migrate-from-jekyl"]
 image = "pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg"
 +++
 
-This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
+Markdown 是讓你快速撰寫筆記，流暢管理知識，支援多種衍生功能的生產力工具
 <!--more-->
 
-## Headings
+## 標題
 
-The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
+當您想要將一段文字標示為標題的時候，請使用這個語法。  
+請在行首輸入 `#` 符號，並在後面加上一個空白後，再輸入標題文字。  
+標題有分成 6 個層級，`#` 的數量愈多，層級越低。
 
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
+```
+#      第一層級標題 h1
+##     第二層級標題 h2
+###    第三層級標題 h3
+####   第四層級標題 h4
+#####  第五層級標題 h5
+###### 第六層級標題 h6
+```
 
 ## Paragraph
 
