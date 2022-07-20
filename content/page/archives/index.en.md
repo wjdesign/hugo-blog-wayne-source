@@ -1,5 +1,5 @@
 ---
-title: "文章卷宗"
+title: Archives
 date: 2020-01-01
 layout: "archives"
 slug: "archives"

@@ -221,7 +221,10 @@
     svg {
         width: 24px;
         height: 24px;
-        stroke: var(--body-text-color);
         stroke-width: 1.33;
+
+        &.icon-tabler-brand-github {
+            stroke: var(--body-text-color);
+        }
     }
 }

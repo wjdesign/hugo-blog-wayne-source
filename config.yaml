@@ -213,6 +213,18 @@ menu:
           params:
               icon: brand-github
 
+        - identifier: facebook
+          name: Facebook
+          url: https://www.facebook.com/profile.php?id=100072246543642
+          params:
+              icon: brand-facebook
+
+        - identifier: instagram
+          name: Instagram
+          url: https://www.instagram.com/huai_lin/
+          params:
+              icon: brand-instagram
+
         # - identifier: twitter
         #   name: Twitter
         #   url: https://twitter.com

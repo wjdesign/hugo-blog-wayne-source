@@ -1,7 +1,7 @@
 ---
-title: About
-description: Hugo, the world's fastest framework for building websites
-date: '2019-02-28'
+title: 關於本站
+description: 本站用於紀錄自己所寫過、學習過、玩過或接觸過的相關技術筆記，並未作為商業用途，相關文章參考皆會於文章內附上，若未附上請別見怪，可能是我忘記了。
+date: '2022-07-20'
 aliases:
   - about-us
   - about-hugo
@@ -15,20 +15,17 @@ menu:
             icon: user
 ---
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+## 介紹  
 
-Hugo makes use of a variety of open source projects including:
+本站僅為技術性分享網站，資料來源多為網路收集、課程學習、自行領悟而來，經由本站做為個人紀錄筆記使用，以便需要時查詢，若文章內容有誤或有不當引用敬請告知本人，感謝。  
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+---
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+## 免責聲明  
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+本網站對於任何使用或引用本網站網頁資料引致之損失或損害，概不負責。 本網站亦有權隨時刪除、暫停或編輯本網站所登載之各項資料，以維護本網站之權益。 除法律有強制規定外，在任何情況下，本網站對於下列情形所致生之任何直接、間接、附帶、特別、懲罰性或衍生性損害，一概不負賠償責任。  
 
-Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
-
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+1. 使用或無法使用本網站之各項服務。
+2. 經由本網站取得訊息或進行交易。
+3. 第三人在本網站上之陳述或作為。
+4. 其他與本網站服務有關之事項。
