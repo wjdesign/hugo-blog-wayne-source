@@ -54,7 +54,7 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon:
+    favicon: https://i.imgur.com/QtF0zuU.png
 
     footer:
         since: 2020
