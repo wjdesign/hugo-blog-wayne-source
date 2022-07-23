@@ -1,0 +1,65 @@
+name: Auto build and publish to public site repository
+
+# 只有推送到 main 才觸發
+on:
+  push:
+    branches: 
+      - "main"
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  hugo-publish:
+    name: publish content to public site
+    runs-on: ubuntu-latest
+    steps:
+      # 使用當前 source code 的 repo
+      - name: checkout source code repo
+        uses: actions/checkout@v3
+        with:
+          # 因為目前的 repo 有使用到 submodule(hugo themes)，所以 submodule 也要一併同步，不然原本的 repo 是沒有 submodule 的內容
+          submodules: true
+          token: ${{ secrets.ACCESS_TOKEN }}
+
+      # public 網站是放置在另一個 repo 所以這裡也要 clone 一份下來處理
+      # 因為我 Hugo 預設是產生檔案到 public 資料夾，所以將 public repo clone 到 ./public/ 內，以便後續 publish
+      - name: clone and checkout public repo
+        uses: actions/checkout@v3
+        with:
+          # 這裡是 public 網站在 github 上的 repo 名稱
+          repository: wjdesign/hugo-blog-wayne
+          path: public
+          # tip: 需事先產生一把 personal access token 放到 repo 的 secrets 裡
+          # 然後 secrets 裡的名稱就叫 ACCESS_TOKEN
+          # 參考 https://help.github.com/en/actions/automating-your-workflow-with-github-actions/authenticating-with-the-github_token
+          token: ${{ secrets.ACCESS_TOKEN }}
+
+      # 使用別人做好的 Hugo Actions
+      - name: setup hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: latest
+          extended: true
+
+      # 用 Hugo 產生檔案
+      - name: build content to public site
+        working-directory: ./
+        # --cleanDestinationDir 清除舊檔案
+        run: hugo --minify --gc --cleanDestinationDir
+
+      # 將檔案 commit 到 網站 public repo
+      - name: deploy and publish updates
+        working-directory: ./public
+        # user.email 還有 user.name 可以取自己喜歡的，一定要設定不然會出錯
+        run: |
+          # 當 git 有更動時才進行動作
+          if [[ `git status --porcelain` ]]; then
+            git config --local user.email "4006wayne@gmail.com"
+            git config --local user.name "github action"
+            git add . -A
+            git commit -m "build: auto publish"
+            git push origin
+          else
+            echo "content no changes"
+          fi
+
