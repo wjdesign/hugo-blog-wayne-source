@@ -67,7 +67,7 @@ params:
     sidebar:
         # emoji: 🍥
         emoji: 💵
-        subtitle: 單純玩玩 Hugo
+        subtitle: 純粹紀錄個人筆記
         avatar:
             enabled: true
             local: true

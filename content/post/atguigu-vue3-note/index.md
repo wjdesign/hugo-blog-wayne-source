@@ -6,17 +6,17 @@ description = "Vue是一套用於構建用戶界面的漸進式JavaScript框架�
 
 tags = [
     "前端",
-    "vue3"
+    "vue"
 ]
 
 categories = [
     "前端",
-    "vue3"
+    "vue"
 ]
 
 series = ["Themes Guide"]
 aliases = ["migrate-from-jekyl"]
-image = "143400003_253834612811965_4864474600445741482_n.jpeg"
+image = "index.jpeg"
 +++
 
 <style>

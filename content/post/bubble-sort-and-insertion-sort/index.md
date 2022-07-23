@@ -10,8 +10,7 @@ tags = [
 ]
 
 categories = [
-    "演算法",
-    "排序"
+    "演算法"
 ]
 
 series = ["Themes Guide"]
